@@ -1,0 +1,443 @@
+{
+ "split": {
+  "train": "2025-11..2026-07",
+  "valid": "2026-08",
+  "test": "2026-09..2026-10",
+  "rows": {
+   "train": 3741644,
+   "valid": 391353,
+   "test": 844927
+  }
+ },
+ "late_threshold_minutes": 5,
+ "classifier_thresholds": {
+  "all": 0.42,
+  "starts_here": 0.21
+ },
+ "trees": {
+  "regressor": 3000,
+  "classifier": 937
+ },
+ "test": {
+  "model": {
+   "mae": 1.763,
+   "f1_late": 0.784
+  },
+  "now": {
+   "mae": 2.029,
+   "f1_late": 0.751
+  },
+  "now_adjusted": {
+   "mae": 1.985,
+   "f1_late": 0.756
+  },
+  "history": {
+   "mae": 4.563,
+   "f1_late": 0.485
+  }
+ },
+ "test_late_share": 0.21,
+ "starts_here_f1_with_own_threshold": 0.333,
+ "by_group": [
+  {
+   "group": "S-Bahn",
+   "n": 460161,
+   "model_mae": 0.74,
+   "model_f1": 0.865,
+   "now_mae": 0.92,
+   "now_f1": 0.833,
+   "now_adjusted_mae": 0.9,
+   "now_adjusted_f1": 0.84,
+   "history_mae": 2.63,
+   "history_f1": 0.287
+  },
+  {
+   "group": "regional",
+   "n": 259758,
+   "model_mae": 2.24,
+   "model_f1": 0.62,
+   "now_mae": 2.51,
+   "now_f1": 0.588,
+   "now_adjusted_mae": 2.42,
+   "now_adjusted_f1": 0.596,
+   "history_mae": 4.37,
+   "history_f1": 0.429
+  },
+  {
+   "group": "long-distance",
+   "n": 125008,
+   "model_mae": 4.54,
+   "model_f1": 0.802,
+   "now_mae": 5.11,
+   "now_f1": 0.77,
+   "now_adjusted_mae": 5.06,
+   "now_adjusted_f1": 0.77,
+   "history_mae": 12.08,
+   "history_f1": 0.665
+  }
+ ],
+ "by_origin": [
+  {
+   "group": "through train",
+   "n": 591002,
+   "model_mae": 1.45,
+   "model_f1": 0.869,
+   "now_mae": 1.74,
+   "now_f1": 0.837,
+   "now_adjusted_mae": 1.7,
+   "now_adjusted_f1": 0.846,
+   "history_mae": 4.97,
+   "history_f1": 0.53
+  },
+  {
+   "group": "starts here",
+   "n": 253925,
+   "model_mae": 2.5,
+   "model_f1": 0.123,
+   "now_mae": 2.7,
+   "now_f1": 0.0,
+   "now_adjusted_mae": 2.65,
+   "now_adjusted_f1": 0.141,
+   "history_mae": 3.62,
+   "history_f1": 0.307
+  }
+ ],
+ "by_lead_time": [
+  {
+   "group": "<=2 min",
+   "n": 335342,
+   "model_mae": 0.54,
+   "model_f1": 0.913,
+   "now_mae": 0.69,
+   "now_f1": 0.89,
+   "now_adjusted_mae": 0.68,
+   "now_adjusted_f1": 0.894,
+   "history_mae": 2.61,
+   "history_f1": 0.309
+  },
+  {
+   "group": "starts here",
+   "n": 255731,
+   "model_mae": 2.52,
+   "model_f1": 0.139,
+   "now_mae": 2.75,
+   "now_f1": 0.027,
+   "now_adjusted_mae": 2.7,
+   "now_adjusted_f1": 0.157,
+   "history_mae": 3.65,
+   "history_f1": 0.311
+  },
+  {
+   "group": "3-9 min",
+   "n": 154860,
+   "model_mae": 1.38,
+   "model_f1": 0.843,
+   "now_mae": 1.71,
+   "now_f1": 0.801,
+   "now_adjusted_mae": 1.64,
+   "now_adjusted_f1": 0.815,
+   "history_mae": 4.88,
+   "history_f1": 0.456
+  },
+  {
+   "group": "30+ min",
+   "n": 50771,
+   "model_mae": 5.59,
+   "model_f1": 0.828,
+   "now_mae": 6.29,
+   "now_f1": 0.795,
+   "now_adjusted_mae": 6.2,
+   "now_adjusted_f1": 0.805,
+   "history_mae": 14.16,
+   "history_f1": 0.723
+  },
+  {
+   "group": "10-29 min",
+   "n": 48223,
+   "model_mae": 3.47,
+   "model_f1": 0.866,
+   "now_mae": 4.06,
+   "now_f1": 0.838,
+   "now_adjusted_mae": 3.92,
+   "now_adjusted_f1": 0.848,
+   "history_mae": 11.86,
+   "history_f1": 0.7
+  }
+ ],
+ "by_station": [
+  {
+   "group": "Hamburg Hbf",
+   "n": 97245,
+   "model_mae": 1.41,
+   "model_f1": 0.785,
+   "now_mae": 1.57,
+   "now_f1": 0.753,
+   "now_adjusted_mae": 1.49,
+   "now_adjusted_f1": 0.766,
+   "history_mae": 3.6,
+   "history_f1": 0.41
+  },
+  {
+   "group": "Frankfurt (Main) Hbf",
+   "n": 87311,
+   "model_mae": 1.75,
+   "model_f1": 0.725,
+   "now_mae": 1.95,
+   "now_f1": 0.681,
+   "now_adjusted_mae": 1.86,
+   "now_adjusted_f1": 0.701,
+   "history_mae": 4.21,
+   "history_f1": 0.446
+  },
+  {
+   "group": "M\u00fcnchen Hbf",
+   "n": 86706,
+   "model_mae": 1.28,
+   "model_f1": 0.845,
+   "now_mae": 1.5,
+   "now_f1": 0.804,
+   "now_adjusted_mae": 1.4,
+   "now_adjusted_f1": 0.814,
+   "history_mae": 3.07,
+   "history_f1": 0.417
+  },
+  {
+   "group": "Berlin Hbf",
+   "n": 73775,
+   "model_mae": 1.19,
+   "model_f1": 0.814,
+   "now_mae": 1.52,
+   "now_f1": 0.785,
+   "now_adjusted_mae": 1.49,
+   "now_adjusted_f1": 0.792,
+   "history_mae": 3.91,
+   "history_f1": 0.541
+  },
+  {
+   "group": "Stuttgart Hbf",
+   "n": 66494,
+   "model_mae": 1.86,
+   "model_f1": 0.754,
+   "now_mae": 2.14,
+   "now_f1": 0.718,
+   "now_adjusted_mae": 2.07,
+   "now_adjusted_f1": 0.727,
+   "history_mae": 4.25,
+   "history_f1": 0.353
+  },
+  {
+   "group": "K\u00f6ln Hbf",
+   "n": 65404,
+   "model_mae": 1.92,
+   "model_f1": 0.854,
+   "now_mae": 2.15,
+   "now_f1": 0.831,
+   "now_adjusted_mae": 2.13,
+   "now_adjusted_f1": 0.834,
+   "history_mae": 6.45,
+   "history_f1": 0.506
+  },
+  {
+   "group": "Berlin Ostbahnhof",
+   "n": 52916,
+   "model_mae": 0.56,
+   "model_f1": 0.79,
+   "now_mae": 0.81,
+   "now_f1": 0.762,
+   "now_adjusted_mae": 0.82,
+   "now_adjusted_f1": 0.763,
+   "history_mae": 1.5,
+   "history_f1": 0.002
+  },
+  {
+   "group": "D\u00fcsseldorf Hbf",
+   "n": 51008,
+   "model_mae": 2.25,
+   "model_f1": 0.815,
+   "now_mae": 2.61,
+   "now_f1": 0.797,
+   "now_adjusted_mae": 2.57,
+   "now_adjusted_f1": 0.78,
+   "history_mae": 6.66,
+   "history_f1": 0.556
+  },
+  {
+   "group": "N\u00fcrnberg Hbf",
+   "n": 44915,
+   "model_mae": 2.52,
+   "model_f1": 0.636,
+   "now_mae": 2.76,
+   "now_f1": 0.619,
+   "now_adjusted_mae": 2.68,
+   "now_adjusted_f1": 0.622,
+   "history_mae": 4.62,
+   "history_f1": 0.521
+  },
+  {
+   "group": "Hannover Hbf",
+   "n": 40014,
+   "model_mae": 3.18,
+   "model_f1": 0.768,
+   "now_mae": 3.58,
+   "now_f1": 0.737,
+   "now_adjusted_mae": 3.54,
+   "now_adjusted_f1": 0.742,
+   "history_mae": 7.34,
+   "history_f1": 0.585
+  },
+  {
+   "group": "Leipzig Hbf",
+   "n": 39991,
+   "model_mae": 1.42,
+   "model_f1": 0.731,
+   "now_mae": 1.59,
+   "now_f1": 0.709,
+   "now_adjusted_mae": 1.62,
+   "now_adjusted_f1": 0.713,
+   "history_mae": 3.83,
+   "history_f1": 0.447
+  },
+  {
+   "group": "Dortmund Hbf",
+   "n": 36654,
+   "model_mae": 2.86,
+   "model_f1": 0.747,
+   "now_mae": 3.12,
+   "now_f1": 0.725,
+   "now_adjusted_mae": 3.06,
+   "now_adjusted_f1": 0.719,
+   "history_mae": 6.55,
+   "history_f1": 0.618
+  },
+  {
+   "group": "Mannheim Hbf",
+   "n": 32548,
+   "model_mae": 2.26,
+   "model_f1": 0.792,
+   "now_mae": 3.02,
+   "now_f1": 0.731,
+   "now_adjusted_mae": 2.75,
+   "now_adjusted_f1": 0.752,
+   "history_mae": 6.7,
+   "history_f1": 0.545
+  },
+  {
+   "group": "Essen Hbf",
+   "n": 29639,
+   "model_mae": 2.17,
+   "model_f1": 0.663,
+   "now_mae": 2.18,
+   "now_f1": 0.663,
+   "now_adjusted_mae": 2.69,
+   "now_adjusted_f1": 0.604,
+   "history_mae": 5.19,
+   "history_f1": 0.403
+  },
+  {
+   "group": "Bremen Hbf",
+   "n": 23099,
+   "model_mae": 2.02,
+   "model_f1": 0.742,
+   "now_mae": 2.47,
+   "now_f1": 0.686,
+   "now_adjusted_mae": 2.41,
+   "now_adjusted_f1": 0.704,
+   "history_mae": 5.32,
+   "history_f1": 0.517
+  },
+  {
+   "group": "Dresden Hbf",
+   "n": 17208,
+   "model_mae": 1.18,
+   "model_f1": 0.839,
+   "now_mae": 1.49,
+   "now_f1": 0.801,
+   "now_adjusted_mae": 1.3,
+   "now_adjusted_f1": 0.83,
+   "history_mae": 4.08,
+   "history_f1": 0.419
+  }
+ ],
+ "by_hour": [
+  {
+   "group": "10-15",
+   "n": 266668,
+   "model_mae": 1.72,
+   "model_f1": 0.777,
+   "now_mae": 1.97,
+   "now_f1": 0.745,
+   "now_adjusted_mae": 1.96,
+   "now_adjusted_f1": 0.745,
+   "history_mae": 4.5,
+   "history_f1": 0.496
+  },
+  {
+   "group": "16-19",
+   "n": 185273,
+   "model_mae": 1.98,
+   "model_f1": 0.795,
+   "now_mae": 2.31,
+   "now_f1": 0.762,
+   "now_adjusted_mae": 2.22,
+   "now_adjusted_f1": 0.765,
+   "history_mae": 5.22,
+   "history_f1": 0.507
+  },
+  {
+   "group": "6-9",
+   "n": 175906,
+   "model_mae": 1.58,
+   "model_f1": 0.769,
+   "now_mae": 1.83,
+   "now_f1": 0.734,
+   "now_adjusted_mae": 1.77,
+   "now_adjusted_f1": 0.742,
+   "history_mae": 3.78,
+   "history_f1": 0.403
+  },
+  {
+   "group": "20-23",
+   "n": 131225,
+   "model_mae": 1.87,
+   "model_f1": 0.806,
+   "now_mae": 2.16,
+   "now_f1": 0.776,
+   "now_adjusted_mae": 2.1,
+   "now_adjusted_f1": 0.783,
+   "history_mae": 5.14,
+   "history_f1": 0.533
+  },
+  {
+   "group": "0-5",
+   "n": 85855,
+   "model_mae": 1.63,
+   "model_f1": 0.746,
+   "now_mae": 1.81,
+   "now_f1": 0.723,
+   "now_adjusted_mae": 1.81,
+   "now_adjusted_f1": 0.729,
+   "history_mae": 4.07,
+   "history_f1": 0.417
+  }
+ ],
+ "feature_importance_gain": {
+  "prev_delay": 18019357.0,
+  "line_number": 9206125.0,
+  "prev2_delay": 7714087.0,
+  "eva": 6484670.0,
+  "dwell_minutes": 4597914.0,
+  "hour": 4069262.0,
+  "stop_index": 3406256.0,
+  "station": 3068717.0,
+  "run_minutes": 2776548.0,
+  "train_type": 2163454.0,
+  "temperature_2m": 1699455.0,
+  "weekday": 1379379.0,
+  "wind_speed_10m": 254587.0,
+  "prev_canceled": 180077.0,
+  "precipitation": 55128.0,
+  "is_replacement_train": 52527.0,
+  "snowfall": 22078.0,
+  "is_additional_stop": 18563.0
+ }
+}
